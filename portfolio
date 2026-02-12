@@ -3,103 +3,318 @@
 <head>
     <meta charset="UTF-8">
     <title>Personal Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background: #0f172a;
+            padding: 15px 40px;
+            position: sticky;
+            top: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h2 {
+            color: white;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #38bdf8;
+        }
+
+        section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #3b82f6, #6366f1);
+            color: white;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            background: white;
+            color: #0f172a;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #0f172a;
+            color: white;
+        }
+
+        .light {
+            background: #f1f5f9;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .lang-card {
+            background: linear-gradient(135deg, #e0e7ff, #f8fafc);
+            border-left: 5px solid #6366f1;
+        }
+
+        .contact-form {
+            max-width: 500px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            padding: 10px;
+            border: none;
+            background: #6366f1;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            background: #0f172a;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        @media(max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-    <h1 align="center">My Portfolio</h1>
-    <hr>
+<header>
+    <nav>
+        <h2>MyPortfolio</h2>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#strengths">Strengths</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#language">Languages</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <p align="center">
-        <a href="#home">Home</a> |
-        <a href="#about">About</a> |
-        <a href="#education">Education</a> |
-        <a href="#skills">Skills</a> |
-        <a href="#strength">Strength</a> |
-        <a href="#weakness">Weakness</a> |
-        <a href="#projects">Projects</a> |
-        <a href="#contact">Contact</a>
-    </p>
-
-    <hr>
-
-    <!-- Home -->
-    <h2 id="home">Home</h2>
-    <p>Hello, I am <b>Joshika Baskar</b>.</p>
+<section id="home" class="hero">
+    <h1>Hello, I am <b>Joshika Baskar</b></h1>
     <p>Computer Science Engineering Student</p>
+</section>
 
-    <hr>
-
-    <!-- About -->
-    <h2 id="about">About Me</h2>
+<section id="about">
+    <h2>About Me</h2>
     <p>
-        I am a motivated web developer with a strong background in <small>HTML</small> and <small>CSS</small>. I aim to build responsive and user-friendly websites that deliver a great user experience.<br>
-<b>Education:</b> B.Tech in Computer Science <br>
-<b>Career Goal:</b> To become a Full Stack Developer.
+        I am a motivated web developer with a strong foundation in HTML and CSS.
+        I aim to build responsive and user-friendly websites.
+        <br><br>
+        <b>Education:</b> B.E – Computer Science Engineering <br>
+        <b>Career Goal:</b> To become a Full Stack Developer
     </p>
+</section>
 
+<section id="education" class="light">
+    <h2>Educational Qualification</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>B.E – Computer Science Engineering</h3>
+            <p>Bannari Amman Institute of Technology</p>
+            <p>2025 – 2029</p>
+        </div>
+        <div class="card">
+            <h3>Higher Secondary (HSC)</h3>
+            <p>CBSE - Jain Vidyalaya</p>
+            <p>Completed in the year 2025</p>
+        </div>
+        <div class="card">
+            <h3>Secondary School (SSLC)</h3>
+            <p>CBSE - PSBB Learning Leadership Academy</p>
+            <p>Completed in the year 2023</p>
+        </div>
+    </div>
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="grid">
+        <div class="card">HTML</div>
+        <div class="card">CSS</div>
+        <div class="card">C Programming</div>
+        <div class="card">Problem Solving</div>
+        <div class="card">Team Work</div>
+    </div>
+</section>
+
+<section id="strengths" class="light">
+    <h2>Strengths & Weaknesses</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Strengths</h3>
+            <ul style="text-align:left;">
+                <li>Quick learner</li>
+                <li>Positive attitude</li>
+                <li>Good problem-solving skills</li>
+                <li>Team player</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Weaknesses</h3>
+            <ul style="text-align:left;">
+                <li>Overthinking sometimes</li>
+                <li>Perfectionism</li>
+                <li>Public speaking (improving)</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="achievements">
+    <h2>Achievements</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Certification</h3>
+            <p>Completed C Programming – Level 1</p>
+        </div>
+        <div class="card">
+            <h3>Personal Growth</h3>
+            <p>Consistently improving technical and communication skills</p>
+        </div>
+    </div>
+</section>
+
+<section id="projects" class="light">
+    <h2>Projects</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Portfolio Website</h3>
+            <p>Designed and developed a responsive personal portfolio using HTML and CSS.</p>
+        </div>
+    </div>
+</section>
+
+<section id="language">
+    <h2>Languages Known</h2>
+    <div class="grid">
+        <div class="card lang-card">
+            <h3>English</h3>
+            <p>Professional Proficiency</p>
+        </div>
+        <div class="card lang-card">
+            <h3>Tamil</h3>
+            <p>Native Language</p>
+        </div>
+        <div class="card lang-card">
+            <h3>German</h3>
+            <p>Beginner (Learning)</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="light">
+    <h2>Contact Me</h2>
+    <form class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+
+    <p style="margin-top:20px;">
+        Email: joshikabaskar@gmail.com <br>
+        Phone: +91 9790613790
     </p>
+</section>
 
-    <hr>
-
-    <!-- Education -->
-    <h2 id="education">Educational Qualification</h2>
-    <ul>
-        <li><b>B.E Computer Science Engineering</b> – Pursuing (1st Year)</li>
-        <li><b>Higher Secondary (12th)</b> – Completed in Jain Vidyalaya (2025 batch)</li>
-        <li><b>SSLC (10th)</b> – Completed in PSBB Learning Leadership Academy (2023 batch)</li>
-    </ul>
-
-    <hr>
-
-    <!-- Skills -->
-    <h2 id="skills">Skills</h2>
-    <ul>
-        <li>HTML</li>
-        <li>C Programming</li>
-        <li>Problem Solving</li>
-        <li>Team Work</li>
-    </ul>
-
-    <hr>
-
-    <!-- Strength -->
-    <h2 id="strength">Strength</h2>
-    <ul>
-        <li>Quick learner</li>
-        <li>Hardworking</li>
-        <li>Good communication skills</li>
-        <li>Positive attitude</li>
-    </ul>
-
-    <hr>
-
-    <!-- Weakness -->
-    <h2 id="weakness">Weakness</h2>
-    <ul>
-        <li>Sometimes overthink small details</li>
-        <li>Nervous while public speaking (working on improving)</li>
-    </ul>
-
-    <hr>
-
-    <!-- Projects -->
-    <h2 id="projects">Projects</h2>
-    <ol>
-        <li>
-            <b>Portfolio Website</b><br>
-            Created a simple personal portfolio using HTML.
-        </li>
-    </ol>
-
-    <hr>
-
-    <!-- Contact -->
-    <h2 id="contact">Contact Me</h2>
-    <p>
-        <b>Email:</b> joshikabaskar.cs25@bitsathy.ac.in<br>
-        <b>Phone:</b> +91 9790613790<br>
-        <b>Location:</b> Bannari Amman Institute of Technology, Sathyamangalam.
-    </p>
+<footer>
+    ThankYou!!
+</footer>
 
 </body>
 </html>
